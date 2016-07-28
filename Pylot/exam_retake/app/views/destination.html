@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destination</title>
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+
+</head>
+<body>
+	<div class="leftheader"><a href="/travels">Home</a>&nbsp;|&nbsp;<a href="/clear">Logout</a></div>
+	{% for destination in destinations %}
+	<h3>{{ destination['destination']}}</h3>
+	<p>Planned By: {{destination['name']}}</p>
+	<p>Description: {{destination['description']}}</p>
+	<p>Travel Date From: {{destination['depart']}}</p>
+	<p>Travel Date To: {{destination['arrive']}}</p>
+	{% endfor %}
+	<br>
+
+<h3>Other users joining the trip</h3>
+{% for buddy in buddies %}
+<p>{{buddy['name']}}</p>
+{% endfor %}
+
+
+</body>
+</html>
