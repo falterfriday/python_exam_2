@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Dashboard</title>
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+	<div class="leftheader"><a href="/clear">Logout</a></div>
+	<h2>Hello, {{name}}</h2>
+
+	<h4>Your Trip Scedules</h4>
+	<table>
+	  <tr>
+	    <th>Destination</th>
+	    <th>Travel Start Date</th>
+	    <th>Travel End Date</th>
+	    <th>Plan</th>
+	  </tr>
+	  	{% for trip in trips %}
+		  <tr>
+		    <td><a href="/travels/destination/{{trip['id']}}">{{ trip['destination']}}</a></td>
+		    <td>{{ trip['depart']}}</td>
+		    <td>{{ trip['arrive']}}</td>
+		    <td>{{ trip['description']}}</td>
+		  </tr>
+	  	{% endfor %}
+	  	</table>
+	 
+	  <h4>Other User's Travel Plans</h4>
+	  {% if other_trips %}	
+		<table>
+			<tr>
+				<th>Name</th>
+			    <th>Destination</th>
+			    <th>Travel Start Date</th>
+			    <th>Travel End Date</th>
+			    <th>Do You Want to Join?</th>
+	  		</tr>
+	  	{% for trip in other_trips %}
+			<tr>
+			  	<td>{{ trip['name']}}</td>
+			    <td><a href="/travels/destination/{{trip['trip_id']}}">{{ trip['destination']}}</a></td>
+			    <td>{{ trip['depart']}}</td>
+			    <td>{{ trip['arrive']}}</td>
+			    <td><a href="/join/{{trip['trip_id']}}">Join</a></td>
+			</tr>
+
+	  	{% endfor %}
+	  {% endif %}
+	  </table>
+
+	
+
+
+
+
+
+
+<a href="/travels/add">Add Travel Plans</a>
+
+</body>
+</html>
