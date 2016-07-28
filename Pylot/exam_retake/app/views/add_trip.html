@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Plan</title>
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+  	var dateToday = new Date()
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 2,
+          minDate: dateToday,
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 2
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+  } );
+  </script>
+</head>
+<body>
+	<div class="leftheader"><a href="/travels">Home</a>&nbsp;|&nbsp;<a href="/clear">Logout</a></div>
+	<h2>Add a trip</h2>
+	<form action="/add_trip" method="POST">
+		Destination: <input type="text" name="destination" autofocus><br>
+		Description: <input type="text" name="description"><br>
+		Travel Date From: <input type="text" name="depart" id="from"><br>
+		Travel Date To: <input type="text" name="arrive" id="to"><br>
+		<input type="submit" name="submit" value="Add"><br>
+	</form>
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				<ul class=flashes>
+					{% for category, message in messages %}
+						{% if category == 'travel_errors' %}
+							<li>{{ message }}</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+
+
+
+
+
+</body>
+</html>
