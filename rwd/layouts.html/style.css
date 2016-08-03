@@ -1,0 +1,41 @@
+* {
+	font-family: Arial;
+}
+body {
+	height: 800px;
+}
+a {
+	color: purple;
+}
+h1, h2 {
+	background-color: lightgray;
+	margin:0;
+	padding: 15px 0 15px 15px;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+li {
+	display: inline-block;
+	border: solid darkgray 1px;
+	padding:5px 10px;
+	background-color: lightgray;
+}
+div {
+	/*border: solid black 1px;*/
+	width: 220px;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 10px;
+}
+h4, p {
+	margin: 5px 0px 5px 0px;
+	/*padding-right: 10px;*/
+}
+
+@media only screen and (max-width: 860px) {
+    ul { display: none; }
+    div { width: 31%; }
+    .loner { width: 100%; }

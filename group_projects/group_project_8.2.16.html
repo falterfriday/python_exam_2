@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  var down_time
+
+    $("body").mousedown(function(event){
+      // console.log(event);
+      down_time = event.timeStamp;
+    });
+    $("body").mouseup(function(event){
+      // console.log(event.timeStamp);
+      console.log(`Time clicked = ${Math.floor(event.timeStamp-down_time)}ms`);
+    });
+});
+</script>
+</head>
+<body>
+  <div style="height:1000px; width:1000px"><h1>Click the mouse. Do IT!!</h1></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Card</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+	<script>
+			$(document).ready(function(){
+				$('form').submit(function(){
+					var fname = $('#fname').val();
+					var lname = $('#lname').val();
+					var desc = $('#desc').val();
+					// var number = $('#number').val();
+					$('h2').append('<div class="submission2"><tr><td>'+fname+'</td><td>&nbsp;'+lname+'</td></tr><h3>Click for Description</h4><h4 hidden>'+desc+'</h4></div>');	
+					return false
+				});
+			$(document).on('click','.submission2',function(){
+				$(this).children('h3').hide();
+				$(this).children('h4').show();
+				});
+			// $(document).on('click','#submission3',function(){
+			// 	$(this).hide();
+			// 	$('#submission2').show();
+			// });
+		})
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="card">
+			<h1>Contact Card</h1>
+			<div id="input">
+				<form>
+					First Name: <input type="text" id="fname"><br>
+					<br>
+					Last Name: <input type="text" id="lname"><br>
+					<br>
+					Description: <br>
+					<textarea rows="4" cols="56" placeholder="This is where you talk about the person. Be Nice." id="desc"></textarea>
+					<br>
+					<input type="submit" value="Add User">
+				</form>
+			</div>
+		</div>
+		<div id="submission">
+			<table>
+				<h2></h2>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

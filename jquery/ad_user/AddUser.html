@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add User</title>
+		<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+	<script>
+		$(document).ready(function(){
+			$('form').submit(function(){
+				var fname = $('#fname').val();
+				var lname = $('#lname').val();
+				var email = $('#email').val();
+				var number = $('#number').val();
+				$('table').append('<tr><td>'+fname+'</td><td>'+lname+'</td><td>'+email+'</td><td>'+number+'</td></tr>');
+				return false
+			})
+		})
+	</script>
+</head>
+<body>
+	<table>
+		<tbody>
+			<thead>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone Number</th>
+			</thead>
+			<tbody>
+			</tbody>
+		</tbody>
+	</table>
+	<br>
+	<h1>Add User</h1>
+	<hr>
+
+	<form>
+		First Name<input type="text" name="" id="fname" placeholder="First Name"><br>
+		Last Name<input type="text" name="" id="lname" placeholder="Last Name"><br>
+		Email<input type="text" name="" id="email" placeholder="Email"><br>
+		Number<input type="text" name="" id="number" placeholder="Number"><br>
+		<input value='Add User' type="submit">
+	</form>
+</body>
+</html>

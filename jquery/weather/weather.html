@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+        <meta charset="utf-8">
+        <title>pokedex-for dc web fun chaps</title>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        </head>
+        <script type="text/javascript">
+
+
+        	$(document).ready(function(){
+        		$('#submit').click(function(){
+        		var loc = $('#city').val();
+        		var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+        		url += loc;
+        		url += '&appid=b3aa6b59fcbe1a8c8403c916ca85804a';
+        		$.get(url, function(res){
+        			console.log((res.main.temp-273)*1.8+32)
+        			var temp = ((res.main.temp-273)*1.8+32);
+              var temp_str ='';
+              temp_str += 'Temperature: ' +Math.floor(temp)+ '&#8457;';
+              $('#temp').html(temp_str);
+              }, "json");
+            $.get(url, function(res){
+              var name = ((res.name));
+              $('#name').html(name);
+            })
+              return false;
+        	 });
+          })
+        </script>
+<style type="text/css">
+  #wrapper {
+  border: solid black 1px;
+  height: 100px;
+  width: 150px;
+  margin-top: 20px;
+  padding-left: 10px; 
+}
+</style>
+<body>
+<input type="text" id="city" name="">
+<input type="submit" id="submit" name="">
+  <div id="wrapper">
+    <h3 id="name"></h3>
+    <p id="temp"></p>
+  </div>
+</body>
+</html>

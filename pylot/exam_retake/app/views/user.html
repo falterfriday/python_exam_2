@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+<h3>Posts by&nbsp;{{ user[0]['alias'] }}</h3>
+<a href="/quotes">Dashboard</a> &nbsp;| &nbsp; <a href="/clear">Logout</a><br>
+Count: {{ count[0]['count(*)'] }}<br>
+{% for thing in user %}
+<div class="submitted_quotes">
+<h3><span>{{ thing['author']}}</span></h3>
+- {{ thing['quote'] }}
+</div>
+{% endfor %}
+<!-- quotes posted by the user -->
+</body>
+</html>

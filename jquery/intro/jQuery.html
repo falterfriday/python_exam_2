@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+	<script>
+		$(document).ready(function(){
+			$('#button').click(function(){
+				$('body').fadeOut();
+			})
+			$('#btn2').click(function(){
+				$('blockquote').toggle();
+				$('p').addClass('span');
+			})
+			$("li").click(function(){
+				$(this).slideUp();
+			})
+			$('input').focus(function(){
+				$('span').css('display','inline').fadeOut('slow');
+				$('li').append('<-- Yeah, thats a thing');
+			})
+			$('#btn3').click(function(){
+				alert('Dont do that!!!');
+			})
+			$('div p').click(function(){
+				alert('you clicked');
+			})
+
+		})
+
+	</script>
+</head>
+
+<body>
+	<div>
+	
+		<div>
+			<h1>This is the beggining of a new page!</h1>
+			<hr>
+			
+			<h3><p>I don't know what to write here, so I'm going to grab some text from a HipsterIpsum generator. Enjoy!</p></h3>
+			<p><strong>Distillery</strong>migas put a bird on it gochujang DIY tousled. Cronut man bun chicharrones brooklyn, umami tousled keffiyeh letterpress mumblecore cliche sartorial bicycle rights. Mumblecore chillwave readymade blog gochujang bicycle rights. Cardigan actually quinoa kitsch, church-key hoodie slow-carb viral health goth aesthetic. <i>Mustache meditation asymmetrical</i>, small batch flexitarian shabby chic narwhal typewriter mumblecore migas. Ethical cornhole selfies, sriracha street art kinfolk ramps marfa tattooed food truck occupy everyday carry mlkshk. Blue bottle next level hashtag helvetica organic mustache.</p>
+		</div>
+			<input type="text"><h1><span>TYPE FASTER!!</span></h1>
+		<div>
+			<ul>
+				<li id="thing">lumbersexual authentic food truck</li>
+				<li>franzen microdosing kombucha </li>
+				<li>Swag lomo kogi pitchfork.</li>
+				<li>Man bun squid slow-carb everyday carry</li>
+				<li>readymade XOXO kickstarter </li>
+					<ol>
+						<li>Mumblecore chillwave</li>
+						<li>helvetica organic mustache</li>
+						<li>Bicycle rights schlitz</li>
+						<li>Semiotics pug pinterest</li>
+					</ol>
+			</div>
+			<br>
+			<button id="btn3">Do ITT!!!</button>
+			<div>
+				<button id='btn2'>See the best quote EVAR!!</button>
+				<blockquote hidden="">Oh. You need a little dummy text for your mockup? How quaint.<br>
+				~Whomever</blockquote>
+			</div>
+
+		</ul>
+	</div>
+	<button id="button">Hipster-b-Gone</button>
+</body>
+</html>

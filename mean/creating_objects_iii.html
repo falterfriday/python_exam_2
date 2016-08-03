@@ -1,0 +1,46 @@
+<html>
+<script>
+function VehicleConstructor(name, wheels, passengers, speed) {
+  //AVOIDS BREAKAGE IF CONSTRUCTOR IS CALLED W/O **NEW**
+  if (!(this instanceof VehicleConstructor)) {
+    return new VehicleConstructor(name, wheels, passengers, speed);
+  }
+  this.distance_travelled = 0
+  this.wheels = wheels || 2
+  this.speed = speed || 0,
+  this.name =  name || 'rollerskates'
+  this.passengers = passengers || 0
+}
+//PROTOTYPE - **AVAILABLE TO ALL**
+VehicleConstructor.prototype.makeNoise = function(noise) {
+  var noise = noise || 'Honk Honk!'
+  console.log(noise)
+  return this
+}
+
+VehicleConstructor.prototype.move = function(noise) {
+  this.makeNoise(noise);
+  this.updateDistanceTravelled();
+  return this
+}
+
+VehicleConstructor.prototype.checkMiles = function() {
+  console.log(this.distance_travelled);
+  return this;
+}
+
+VehicleConstructor.prototype.vin = function() {
+  console.log(Math.floor(Math.random() * Math.pow(10,10)));
+  return this;
+}
+
+VehicleConstructor.prototype.updateDistanceTravelled = function() {
+  this.distance_travelled += this.speed;
+  console.log(this.distance_travelled);
+  return this;
+}
+
+var bike = new VehicleConstructor('bike', 2, 1, 5)
+
+</script>
+</html>

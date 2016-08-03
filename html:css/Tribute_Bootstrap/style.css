@@ -1,0 +1,16 @@
+#white {
+	background: #ffffff;
+}
+ul {
+	margin: auto 200px;
+}
+#h3 {
+	margin-left: 180px;
+}
+#quote {
+	/*border: solid black 1px;*/
+	padding: 0 150px;
+}
+div img {
+	padding: auto 10px;
+}

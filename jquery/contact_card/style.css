@@ -1,0 +1,72 @@
+#wrapper {
+	font-family: Arial;
+}
+#card {
+	border: solid black 1px;
+	width: 400px;
+	padding-bottom: 10px;
+	display: inline-block;
+	background: radial-gradient(pink,lightblue);
+}
+h1 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#input {
+	/*border: solid black 1px;*/
+	padding-left: 20px;
+}
+#fname {
+	margin-left:20px;
+}
+#lname {
+	margin-left: 22px;
+}
+#submission {
+	/*border: solid black 1px;*/
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 20px;
+	width: 400px;
+	height: auto;
+	/*text-align: center;*/
+}
+.submission2 {
+	border: solid gray 1px;
+	vertical-align: top;
+	display: inline-block;
+	margin: 0px 0 20px 20px;
+	padding-top: 25px;
+	width: 400px;
+	height: 100px;
+	font-size: 1.5em;
+	text-align: center;
+	background: radial-gradient(lightblue,pink);
+
+}
+h2 {
+	margin-top: 0px;
+}
+.submission2 h3 {
+	font-size: 0.4em;
+}
+.submission2 h4 {
+	font-size: 0.5em;
+	margin-top: 12px;
+}
+#submission3 {
+	border: solid gray 1px;
+	vertical-align: top;
+	display: none;
+	margin: 0px 0 20px 20px;
+	padding-top: 25px;
+	width: 400px;
+	height: 100px;
+	font-size: 1.5em;
+	text-align: center;
+	background: radial-gradient(lightblue,pink);
+}
+#submission3 h4 {
+	font-size: 0.4em;
+}
+

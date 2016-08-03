@@ -1,0 +1,8 @@
+.ninjabox {
+	display: inline-block;
+	border: solid black 1px;
+	height: 100px;
+}
+/*.hide {
+	display: none;
+}*/

@@ -1,0 +1,14 @@
+cd desktop
+mkdir test
+touch index.html
+touch style.css
+git add index.html
+git add style.css
+git init
+git commit -m "first!"
+git add index.html
+git commit -m "update html"
+git add style.css
+git commit -m "update css"
+git revert HEAD
+

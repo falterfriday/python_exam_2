@@ -1,6 +1,5 @@
 """
-Sample Controller File
-
+CONTROLLER File
 """
 from system.core.controller import *
 
@@ -9,27 +8,27 @@ class Users(Controller):
 		super(Users, self).__init__(action)
 
 		self.load_model('User')
-		self.load_model('Travel')
+		self.load_model('Quote')
 		self.db = self._app.db
 
 	def index(self):
+		print session
 		return self.load_view('index.html')
 
 	def add_user(self):
 		info = {
 			'name':request.form['name'],
-			'username':request.form['username'],
+			'alias':request.form['alias'],
+			'email':request.form['email'],
 			'password':request.form['password'],
 			'pw_confirmation':request.form['pw_confirmation'],
+			'dob':request.form['dob']
 		}
 		create_status = self.models['User'].add_user_to_db(info)
 		if create_status['status'] == True:
-			print "%"*80
-			print session
-			print create_status['user']
 			session['id'] = create_status['user']['id']
-			session['name'] = create_status['user']['name']
-			return redirect('/travels')
+			session['alias'] = create_status['user']['alias']
+			return redirect('/quotes')
 		else:
 			for message in create_status['errors']:
 				flash( message, 'regis_errors')
@@ -37,26 +36,26 @@ class Users(Controller):
 
 	def login_user(self):
 		info = {
-		'username':request.form['username'],
+		'email':request.form['email'],
 		'password':request.form['password']
 		}
 		login_status = self.models['User'].login_user(info)
 
 		if login_status['status'] == True:
-			session['name'] = login_status['user']['name']
+			session['alias'] = login_status['user']['alias']
 			session['id'] = login_status['user']['id']
 			print "%"*100
 			print session
 			print "%"*100
-			return redirect('/travels')
+			return redirect('/quotes')
+		
+
 		else:
 			for message in login_status['errors']:
 				flash( message, 'login_errors')
 			return redirect('/')
 
-
 	def clear(self):
 		session.clear()
 		return redirect('/')
 
-		

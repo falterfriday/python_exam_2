@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<title>Street Fighter Demo - Created by CodingDojo</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/game.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			a = new PlayGround('ch1'); //create a new playGround and pass the id where the first character will be displayed
+			a.initialize();
+			setInterval(a.mainLoop, 200);
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="field">
+		<div id="ch1" class="character"></div>
+		<div id="ch2" class="character"></div>
+	</div>
+</body>
+
+</html>

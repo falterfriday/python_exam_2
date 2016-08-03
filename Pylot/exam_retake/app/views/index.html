@@ -1,19 +1,34 @@
 <html>
 <head>
-	<title>Login/Registration</title>
 	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script>
+	$( function() {
+		$( "#datepicker" ).datepicker({
+			changeMonth: true,
+			changeYear: true,
+			yearRange: "1960:2016",
+			maxDate: '0'
+		});
+	});
+	</script>
 </head>
 <body>
 	<h2>Welcome!</h2>
 	<fieldset>
 		<legend>Register</legend>
-			<form class="login" action="/register" method="POST">
-				<p>Name: <input type="text" name="name" autofocus></p>
-				<p>Username: <input type="text" name="username"></p>
+			<form action="/register" method="POST">
+				<p>Name: <input type="text" name="name"></p>
+				<p>Alias: <input type="text" name="alias"></p>
+				<p>Email: <input type="text" name="email"></p>
 				<p>Password: <input type="password" name="password"></p>
 				<p>Confirm PW: <input type="password" name="pw_confirmation"></p>
+				<p>Date of Birth: <input type="text" id="datepicker" name="dob"></p>
 				<p><input type="submit" name="submit" value="Submit"></p>
-			</form><br>
+			</form>
 		{% with messages = get_flashed_messages(with_categories=true) %}
 			{% if messages %}
 				<ul class=flashes>
@@ -28,11 +43,11 @@
 	</fieldset>
 	<fieldset>
 		<legend>Login</legend>
-			<form class="login" action="/login" method="POST">
-				<p>Username: <input type="text" name="username"></p>
+			<form action="/login" method="POST">
+				<p>Email: <input type="text" name="email"></p>
 				<p>Password: <input type="password" name="password"></p>
 				<p><input type="submit" name="submit" value="Submit"></p>
-			</form><br>
+			</form>
 		{% with messages = get_flashed_messages(with_categories=true) %}
 			{% if messages %}
 				<ul class=flashes>

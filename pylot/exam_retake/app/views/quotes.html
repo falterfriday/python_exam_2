@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+	<h3>Welcome,&nbsp;{{alias}}!</h3>
+	<a href="/clear">Logout</a><br>
+	<fieldset class="allquotes">
+		<legend>Quotable Quotes</legend>
+			<div class="scrollable">
+				{% for quote in quotes %}
+					<p>{{quote['author']}}:
+					{{quote['quote']}}</p>
+					<h6>Added by:&nbsp;<a href="/users/{{ quote['id'] }}">{{quote['alias']}}</a></h6>
+					<form action="/add_to_favorites/{{ quote['quote_id'] }}" method="POST">
+						<input type="submit" name="favorites" value="Add to My List">
+					</form><hr>
+					
+				{% endfor %}
+			</div>
+	</fieldset>
+	<fieldset class="allquotes">
+		<legend>Your Favorites</legend>
+			<div class="scrollable">
+				{% for list in favorites %}
+					<p>{{list['author']}}: {{list['quote']}}</p>
+					<h6>Posted by: <a href="/users/{{ list['id'] }}">{{list['alias']}}</a>
+					<form action="/remove/{{ list['quote_id'] }}" method="POST">
+						<input type="submit" name="remove" value="Remove From My List">
+					</form></h6><hr>
+				{% endfor %}
+			</div>
+	</fieldset>
+	<fieldset>
+		<legend>Add a Quote</legend><br>
+		<form action="/add_quote" method="POST">
+			<p>Author:<input type="text" name="author"></p>
+			<p>Quote:<input type="textbox" name="quote"></p>
+			<p><input type="submit" value="Submit"></p>
+		</form>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+					<ul class=flashes>
+						{% for category, message in messages %}
+							{% if category == 'quote_errors' %}
+								<li>{{ message }}</li>
+							{% endif %}
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+	</fieldset>
+</body>
+</html>

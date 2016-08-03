@@ -1,0 +1,30 @@
+#square {
+	width: 100px;
+	height: 100px;
+	background: orange;
+}
+#circle {
+	width: 100px;
+	height: 100px;
+	background: green;
+	border-radius: 50%;
+}
+#triangle {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+}
+#pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-top: 50px solid black;
+  border-left: 50px solid red;
+  border-bottom: 50px solid blue;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}

@@ -1,0 +1,30 @@
+* {
+  font-family: Arial;
+}
+fieldset {
+	display: inline-block;
+	vertical-align: top;
+}
+.login {
+	text-align: right;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.leftheader {
+	position: fixed;
+	right: 1%;
+	top: 2%;
+}

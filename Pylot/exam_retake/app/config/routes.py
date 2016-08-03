@@ -1,6 +1,7 @@
 """
-    Routes File
+    Routes Configuration File
 """
+
 from system.core.router import routes
 
 
@@ -8,8 +9,8 @@ routes['default_controller'] = 'Users'
 routes['POST']['/register'] = 'Users#add_user'
 routes['POST']['/login'] = 'Users#login_user'
 routes['/clear'] = 'Users#clear'
-routes['/travels'] = 'Travels#index'
-routes['/travels/add'] = 'Travels#new_trip_page'
-routes['POST']['/add_trip'] = 'Travels#add_trip'
-routes['/travels/destination/<trip_id>'] = 'Travels#destination'
-routes['/join/<trip_id>'] = 'Travels#join'
+routes['/quotes'] = 'Quotes#quotes'
+routes['POST']['/add_quote'] = 'Quotes#add_quote'
+routes['/users/<user_id>'] = 'Quotes#user'
+routes['POST']['/add_to_favorites/<quote_id>'] = 'Quotes#add_to_favorites'
+routes['POST']['/remove/<quote_id>'] = 'Quotes#remove_from_favorites_by_id'

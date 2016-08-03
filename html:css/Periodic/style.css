@@ -1,0 +1,90 @@
+#wrapper {
+	border: solid gray 1px; 
+	background: linear-gradient(white, #bf8040 75%);
+	width: 900px;
+	font-family: Arial;
+	height: 500px;
+	border-radius: 5px;
+}
+#top ul li {
+	color: black;
+	border: none;
+	text-align: center;
+}
+ul {
+	padding: 0px;
+	margin: 0px auto;
+}
+ul li {
+	list-style: none;
+	display: inline-block;
+	border: solid black 1px;
+	height: 43px;
+	width: 40px;
+	margin-top: 0px;
+	vertical-align: top;
+	font-size: 0.6em;
+	text-align: center;
+}
+.columns {
+}
+.row {
+	border:none;
+	color: black;
+	text-align: center;
+	padding-top: 4px;
+	font-size: 0.6em;
+}
+.clear {
+	border: none;
+	height:44px;
+	width:42px;
+	font-size: 0.6em;
+}
+.gap1 {
+	margin-left:10px;
+}
+#row8 {
+	padding-top: 15px;
+}
+.bold {
+	font-weight: bold;
+	font-size: 1.75em
+}
+.blue {
+	background: linear-gradient(to bottom right, darkblue, lightblue);
+}
+.red {
+	background: linear-gradient(to bottom right, darkred, pink);
+}
+.yellow {
+	background: linear-gradient(to bottom right, darkorange, lightyellow);
+}
+.green {
+	background: linear-gradient(to bottom right, darkgreen, lightgreen);
+}
+.purple {
+	background: linear-gradient(to bottom right, #4d004d, #cc00cc);
+}
+.weirdos {
+	color: black;
+	font-size: 0.7em;
+}
+#weirdo1 {
+	font-size: 0.7em;
+	padding-top: 4px;
+}
+#label {
+	display: block;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 2.0em;
+	text-align: center;
+	border: solid gray 1px;
+	background: linear-gradient(#bfbfbf 30%,#595959);
+	height: 35px;
+	width: 500px;
+	border-radius: 5px;
+	margin: -470px auto 0px 124px;
+
+}

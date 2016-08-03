@@ -1,0 +1,237 @@
+#wrapper {
+	/*border: solid black 1px;*/
+	width: 960px;
+	height: auto;
+	font-family: Arial;
+	padding: 40px 60px 0px 60px;
+}
+#header {
+	background: linear-gradient(#f9fafb,#cfd0d1);
+	width: 960px;
+	height: 40px;
+	border-radius: 5px;
+}
+#logo {
+	display: inline-block;
+	border-radius: 5px 0px 0px 5px;
+	height: 40px;
+}
+#header ul{
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	width: 500px;
+	vertical-align: top;
+	word-spacing: 150%;
+	margin: auto;
+	padding: 0px 20px 10px 20px;
+	word-spacing: 20px;
+}
+#header ul li {
+	display: inline-block;
+	list-style: none;
+	position: relative;
+}
+#header form {
+	display: inline-block;
+	vertical-align: top;
+	height: 30px;
+}
+#header form input{
+	display: inline-block;
+	border-radius: 50px 0px 0px 50px;
+	margin: 10px 0px 20px 90px;
+	margin-bottom: 20px;
+	vertical-align: top;
+}
+#arrow {
+	vertical-align: top;
+	margin: 10px 0px 20px 0px;
+	border-radius: 0px 5px 5px 0px;
+}
+.lines {
+	font-size: 1.8em;
+	font-weight: normal;
+	color: lightgrey;
+}
+#banner {
+	width: 960px;
+	margin-top: 15px;
+	background: linear-gradient(darkgray,#424444);
+	border-radius: 0 0 5px 5px;
+}
+#banner img {
+	width: 960px;
+}
+#banner ul {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+	color: #55b2d8;
+	padding-left: 24px;
+}
+#banner ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 20px 0 0;
+}
+.white {
+	color: #ffffff;
+}
+#content {
+	border: solid #b0b1b2 2px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: linear-gradient(#ffffff, #e8e9ea);
+}
+#discover {
+	color: #b0b1b2;
+	font-size: 2em;
+	padding: 30px 40px;
+	font-weight: lighter;
+}
+#browse {
+	height: 50px;
+	width: 360px;
+	background: linear-gradient(#4c95bf,#306686);
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.8em;
+	margin-left: 20px;
+	padding: 0 40px;
+}
+.toptext {
+	font-weight: bold;
+	margin-left: 17px;
+	font-size: 1em;
+}
+#video {
+	border-right: solid #b0b1b2 1px;
+	display: inline-block;
+	width: 209px;
+	height: 300px;
+	vertical-align: top;
+	padding: 10px 10px 20px 15px;
+}
+#tourof {
+	border-right: solid #b0b1b2 1px;
+	display: inline-block;
+	width: 209px;
+	height: 300px;
+	vertical-align: top;
+	padding: 10px 10px 20px 15px;
+}
+#freetrial {
+	border-right: solid #b0b1b2 1px;
+	display: inline-block;
+	width: 209px;
+	height: 300px;
+	vertical-align: top;
+	padding: 10px 10px 20px 15px;
+}
+#readyto {
+	display: inline-block;
+	width: 209px;
+	height: 300px;
+	vertical-align: top;
+	padding: 10px 10px 20px 15px;
+}
+.text {
+	font-size: 0.8em;
+}
+.picwidth {
+	width: 200px;
+	height: 151px;
+}
+#downarrow{
+	height: 130px;
+	margin-bottom: 23px;
+}
+#play {
+	margin-bottom: 6px;
+}
+.toppic1 {
+	height: 30px;
+}
+.bottom {
+	width: 200px;
+	height: 40px;
+	border: none;
+	background: linear-gradient(#9ad5ff, #2486d1);
+	color: white;
+	font-size: 1em;
+	border-radius: 5px;
+}
+#hr {
+	margin-bottom: 40px;
+}
+#about {
+	display: inline-block;
+	width: 155px;
+	height: 270px;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+#platform {
+	display: inline-block;
+	width: 155px;
+	height: 270px;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+#store {
+	display: inline-block;
+	width: 155px;
+	height: 270px;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+#support {
+	/*border: solid black 1px;*/
+	display: inline-block;
+	width: 155px;
+	height: 270px;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+#community {
+	display: inline-block;
+	width: 155px;
+	height: 270px;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+#oaktree {
+	display: inline-block;
+	width: 155px;
+	height: 270px;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+#bottom_list ul {
+	list-style: none;
+	padding-left: 0;
+}
+#bottom_list ul li{
+	margin: 0px 0px 15px 5px;
+}
+.toptext1 {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+#bottomlist li {
+	display: inline-block;
+	font-size: 0.8em;
+	color: #b0b1b2;
+}
+a {
+	color: #5eadea;
+}
