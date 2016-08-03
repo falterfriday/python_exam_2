@@ -17,7 +17,3 @@ fibCounter();
 fibCounter();
 fibCounter();
 fibCounter();
-fibCounter();
-fibCounter();
-fibCounter();
-fibCounter();

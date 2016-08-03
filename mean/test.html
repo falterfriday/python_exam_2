@@ -1,14 +1,21 @@
 <html>
-  <body>
-    <button id="someButton">This is Some Button</button>
-    <script>
-    // Link our variable "button" to a DOM element
-    var button = document.getElementById("someButton")
-    // add a DOM eventListener to that variable.
-    button.addEventListener("click", whatToDoOnClick);
-    // here we define the whatToDoOnClick function
-    function whatToDoOnClick() {
-      alert("You Did it!")
-    }    </script>
-  </body>
+<head>
+	<title>bind, call, apply</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+	<script>
+		var customObject = {
+			name:'California, Eureka',
+			onClick:function(){
+					console.log("I've been clicked");
+					console.log(this.name);
+			}
+		}
+		$('button').click(customObject.onClick.bind(customObject));
+	</script>
+<body>
+
+	<button name='button'>Click Me</button>
+
+</body>
 </html>
