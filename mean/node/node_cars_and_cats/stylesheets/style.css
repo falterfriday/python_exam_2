@@ -1,0 +1,10 @@
+img {
+  height:200px;
+  width: auto;
+  border: solid black 1px;
+  display: inline-block;
+}
+form {
+  display: inline-block;
+  text-align: right;
+}
